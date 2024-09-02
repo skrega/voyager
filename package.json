@@ -9,10 +9,11 @@
   "author": "Regina Andrievich",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "del": "^7.1.0",
-    "gulp": "^5.0.0",
-    "gulp-autoprefixer": "^9.0.0",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^10.0.0",
     "gulp-uglify-es": "^3.0.0",
     "jquery": "^3.7.1"
   },

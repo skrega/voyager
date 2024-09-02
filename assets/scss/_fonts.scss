@@ -1,0 +1,94 @@
+@font-face {
+    font-display: swap;
+    font-family: "Lato";
+    src: url("../fonts/lato/lato.eot?") format("eot"),
+        url("../fonts/lato/lato.woff2") format("woff2"),
+        url("../fonts/lato/lato.woff") format("woff"),
+        url("../fonts/lato/lato.ttf") format("truetype"),
+        url("../fonts/lato/lato.svg#Samplino") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "ALS Sector";
+    src: url("../fonts/als-sector/als-sector-regular-regular.eot?") format("eot"),
+        url("../fonts/als-sector/als-sector-regular-regular.woff2") format("woff2"),
+        url("../fonts/als-sector/als-sector-regular-regular.woff") format("woff"),
+        url("../fonts/als-sector/als-sector-regular-regular.ttf") format("truetype"),
+        url("../fonts/als-sector/als-sector-regular-regular.svg#Samplino") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon/icomoon.eot?ym7qer');
+    src: url('../fonts/icomoon/icomoon.eot?ym7qer#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon/icomoon.ttf?ym7qer') format('truetype'),
+        url('../fonts/icomoon/icomoon.woff?ym7qer') format('woff'),
+        url('../fonts/icomoon/icomoon.svg?ym7qer#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-FB:before {
+    content: "\e900";
+    color: #fff;
+}
+
+.icon-Instagram:before {
+    content: "\e901";
+    color: #fff;
+}
+
+.icon-YouTUBE:before {
+    content: "\e902";
+    color: #fff;
+}
+
+.icon-Email:before {
+    content: "\e903";
+}
+
+.icon-Location:before {
+    content: "\e904";
+}
+
+.icon-arrow-right:before {
+    content: "\e905";
+    color: #fff;
+}
+
+.icon-Phone:before {
+    content: "\e906";
+    color: #fff;
+}
+
+.icon-Telegram:before {
+    content: "\e907";
+    color: #fff;
+}
+
+.icon-WhatsApp:before {
+    content: "\e908";
+    color: #fff;
+}
