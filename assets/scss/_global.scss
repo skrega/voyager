@@ -160,8 +160,13 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	grid-gap: 10px;
 
-	span {
+	&-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		grid-gap: 10px;
 		position: relative;
 		z-index: 3;
 	}
