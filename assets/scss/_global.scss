@@ -133,9 +133,43 @@ button {
 	font-weight: 400;
 }
 
-.title {}
+.color-primary {
+	background: linear-gradient(180deg, #50B0FD 0%, #3396DB 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+
+.title-l {
+	font-size: 64px;
+	line-height: 100%;
+}
+
+.title {
+	font-size: 36px;
+	line-height: 120%;
+	background: linear-gradient(180deg, #50B0FD 0%, #3396DB 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+	font-family: 'ALS Sector';
+	font-weight: 400;
+}
+
+.title-s {
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.text-center {
+	text-align: center;
+}
 
 .icon-box {
+	position: relative;
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	background: $primary;
@@ -148,9 +182,43 @@ button {
 		height: 42px;
 	}
 
-	&:hover {
-		background: $accent;
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		transition: opacity .3s;
+		border-radius: 50%;
+		background: linear-gradient(180deg, #50B0FD 0%, #3396DB 44%);
+		opacity: 0;
+		z-index: 1;
 	}
+}
+
+a.icon-box {
+	&:hover::before {
+		opacity: 1;
+	}
+
+	&:active::before {
+		opacity: 1;
+		background: linear-gradient(0deg, #2C8ED3, #2C8ED3);
+	}
+}
+
+.icon-box-m {
+	width: 60px;
+	height: 60px;
+}
+
+.icon-box-l {
+	width: 100px;
+	height: 100px;
 }
 
 .btn {
@@ -184,19 +252,18 @@ button {
 		height: 100%;
 		transition: all .3s;
 		border-radius: 10px;
+		transition: opacity .3;
 	}
 
 	&::before {
-		background: $accent;
-		transform: scaleX(.3);
+		background: linear-gradient(180deg, #50B0FD 0%, #3396DB 44%);
 		opacity: 0;
 		z-index: 1;
-		transform: background .3s;
 	}
 
 	&::after {
+		opacity: 1;
 		background: $primary;
-		transform: scale(.99);
 	}
 }
 
@@ -209,15 +276,28 @@ button {
 	text-transform: uppercase;
 	font-family: "ALS Sector", sans-serif;
 
+
 	&:hover::before {
 		opacity: 1;
-		transform: scaleX(1);
 		transition-duration: .6s;
 		transition-timing-function: cubic-bezier(.25, .74, .22, .99);
 	}
 
 	&:active::before {
-		background: #432063;
+		background: linear-gradient(0deg, #2C8ED3, #2C8ED3);
+	}
+}
+
+.btn-accent {
+	&::after {
+		background: #fff;
+	}
+
+	.btn-content {
+		background: linear-gradient(180deg, #50b0fd 0%, #3396db 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 }
 
@@ -236,4 +316,14 @@ button {
 		line-height: 98px;
 		margin-bottom: 24px;
 	}
+}
+
+.block-text {
+	margin: 0 auto 60px;
+	display: grid;
+	grid-gap: 16px;
+}
+
+.section {
+	margin-bottom: 100px;
 }

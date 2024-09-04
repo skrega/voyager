@@ -5,10 +5,10 @@ Template Post Type: post, page
 */
 ?>
 <?php get_header(); ?>
-<section class="home">
+<section class="home section">
     <div class="container">
-        <div class="homer__inner">
-            <div class="homer-content">
+        <div class="home__inner">
+            <div class="home-content">
                 <h1 class="homer__title title-l color-primary font">
                     <?php the_field('title'); ?>
                 </h1>
@@ -20,9 +20,7 @@ Template Post Type: post, page
                     </span>
                 </button>
             </div>
-            <?php $images = get_field('images');
-            //    print_r($images[0]); 
-            ?>
+            <?php $images = get_field('images'); ?>
             <div class="home-images">
                 <div class="home__img-top">
                     <img src="<?php echo $images[0]['url']; ?>" alt="">
@@ -39,7 +37,7 @@ Template Post Type: post, page
         </div>
     </div>
 </section>
-<section class="solutions">
+<section class="solutions section">
     <div class="container">
         <div class="solutions__head text-center block-text">
             <h2 class="title"><?php the_field('video_title'); ?></h2>
@@ -47,7 +45,7 @@ Template Post Type: post, page
         </div>
         <div class="solutions__inner">
             <div class="solutions__video">
-                <video controls>
+                <video>
                     <source src="<?php the_field('video'); ?>">
                 </video>
             </div>
@@ -56,10 +54,14 @@ Template Post Type: post, page
                 foreach ($video_items as $key => $item) { ?>
                     <div class="solutions-item">
                         <div class="solutions-item__icon icon-box icon-box-m">
-                            <?php echo file_get_contents($item['icon']); ?>
+                            <span class="btn-content">
+                                <?php echo file_get_contents($item['icon']); ?>
+                            </span>
                         </div>
-                        <h4 class="solutions-item__title font title-s color-primary"><?php echo $item['title']; ?></h4>
-                        <p class="solutions-item__text"><?php echo $item['text']; ?></p>
+                        <div class="solutions-item__content">
+                            <h4 class="solutions-item__title font title-s color-primary"><?php echo $item['title']; ?></h4>
+                            <p class="solutions-item__text"><?php echo $item['text']; ?></p>
+                        </div>
                     </div>
                 <?php } ?>
             </div>
@@ -67,9 +69,10 @@ Template Post Type: post, page
     </div>
 </section>
 <!-- house -->
-<div class="bg-block">
+
+<div class="bg-block section" style="background-image: url('<?php the_field('bg_img') ?>');">
     <div class="container">
-        <div class="bg-block__inner">
+        <div class="bg-block__inner d-flex">
             <div class="bg-block__items">
                 <?php $bg_items = get_field('bg_items');
                 foreach ($bg_items as $key => $item) { ?>
@@ -84,11 +87,11 @@ Template Post Type: post, page
                     </div>
                 <?php } ?>
             </div>
-            <h3 class="bg-block__title title-l"><?php the_field('bg_title'); ?></h3>
+            <h3 class="bg-block__title title-l font"><?php the_field('bg_title'); ?></h3>
         </div>
     </div>
 </div>
-<section class="comfort">
+<section class="comfort section">
     <div class="container">
         <div class="comfort__head text-center block-text">
             <h4 class="title"><?php the_field('comfort_title'); ?></h4>
@@ -102,27 +105,28 @@ Template Post Type: post, page
         </div>
     </div>
 </section>
-<section class="composition">
+<section class="composition section">
     <div class="container">
         <div class="composition__head text-center block-text">
             <h2 class="title"><?php the_field('composition_title'); ?></h2>
             <p class="text"><?php the_field('composition_text'); ?></p>
         </div>
-    </div>
-    <div class="composition__items">
-        <?php $composition_items = get_field('composition_items');
-        foreach ($composition_items as $key => $item) { ?>
-            <div class="composition-item">
-                <div class="composition-item__icon icon-box icon-box-l">
-                    <?php echo file_get_contents($item['icon']); ?>
+
+        <div class="composition__items">
+            <?php $composition_items = get_field('composition_items');
+            foreach ($composition_items as $key => $item) { ?>
+                <div class="composition-item text-center">
+                    <div class="composition-item__icon icon-box icon-box-l">
+                        <?php echo file_get_contents($item['icon']); ?>
+                    </div>
+                    <h6 class="composition-item__title  title-s font color-primary"><?php echo $item['title']; ?></h6>
+                    <p class="composition-item__text"><?php echo $item['text']; ?></p>
                 </div>
-                <h6 class="composition-item__title font color-primary"><?php echo $item['title']; ?></h6>
-                <p class="composition-item__text"><?php echo $item['text']; ?><< /p>
-            </div>
-        <?php } ?>
+            <?php } ?>
+        </div>
     </div>
 </section>
-<section class="advantages">
+<section class="advantages section">
     <div class="container">
         <div class="advantages__head text-center block-text">
             <h4 class="title"><?php the_field('advantages_title'); ?></h4>
@@ -145,14 +149,14 @@ Template Post Type: post, page
         </div>
     </div>
 </section>
-<div class="banner">
+<div class="banner section">
     <div class="container">
         <div class="banner__inenr">
             <div class="banner__content">
                 <h4 class="banner__title title"></h4>
                 <p class="banner__text"></p>
                 <div class="banner__bottom">
-                    <button class="banner__btn btn btn-l">
+                    <button class="banner__btn btn btn-accent btn-l">
                         <span class="btn-content">
                             <?php the_field('btn_text'); ?>
                             <span class="icon-arrow-right"></span>
@@ -167,7 +171,7 @@ Template Post Type: post, page
         </div>
     </div>
 </div>
-<section class="about">
+<section class="about section">
     <div class="container">
         <div class="about__head text-center block-text">
             <h4 class="title"><?php the_field('about_title'); ?></h4>
@@ -193,7 +197,7 @@ Template Post Type: post, page
         </div>
     </div>
 </section>
-<section class="factory">
+<section class="factory section">
     <div class="container">
         <div class="factory__inner">
             <div class="factory__content">
@@ -221,7 +225,7 @@ Template Post Type: post, page
         </div>
     </div>
 </section>
-<section class="faq">
+<section class="faq section">
     <div class="container">
         <div class="faq__head text-center block-text">
             <h4 class="title"><?php the_field('faq_title'); ?></h4>

@@ -43,17 +43,23 @@
                 <div class="header__col d-flex">
                     <div class="header-socials d-flex">
                         <a class="header-socials__link d-flex icon-box icon-box-sm" href="tel:">
-                            <span class="icon-Phone"></span>
+                            <span class="btn-content">
+                                <span class="icon-Phone"></span>
+                            </span>
                         </a>
                         <a class="header-socials__link d-flex icon-box icon-box-sm" href="#" target="_blank">
-                            <span class="icon-WhatsApp"></span>
+                            <span class="btn-content">
+                                <span class="icon-WhatsApp"></span>
+                            </span>
                         </a>
                         <a class="header-socials__link d-flex icon-box icon-box-sm" href="#" target="_blank">
-                            <span class="icon-Telegram"></span>
+                            <span class="btn-content">
+                                <span class="icon-Telegram"></span>
+                            </span>
                         </a>
                     </div>
                     <button class="header-btn btn btn-primary btn-sm">
-                        <span>ОСТАВИТЬ ЗАЯВКУ</span>
+                        <span class="btn-content">ОСТАВИТЬ ЗАЯВКУ</span>
                     </button>
                 </div>
             </div>
