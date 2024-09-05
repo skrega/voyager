@@ -229,6 +229,12 @@ a.icon-box {
 	align-items: center;
 	justify-content: center;
 	grid-gap: 10px;
+	font-family: 'ALS Sector';
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 140%;
+	text-transform: uppercase;
 
 	&-content {
 		display: flex;
@@ -271,9 +277,6 @@ a.icon-box {
 	// background: $primary;
 	color: #fff;
 	font-weight: 400;
-	font-size: 16px;
-	line-height: 140%;
-	text-transform: uppercase;
 	font-family: "ALS Sector", sans-serif;
 
 
@@ -322,8 +325,12 @@ a.icon-box {
 	margin: 0 auto 60px;
 	display: grid;
 	grid-gap: 16px;
+	width: 100%;
 }
 
 .section {
 	margin-bottom: 100px;
+}
+.br{
+	border-radius: 40px;
 }
